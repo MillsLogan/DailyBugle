@@ -1,0 +1,16 @@
+FROM httpd:latest
+RUN mkdir -p /usr/local/apache2/htdoc/dailybugle
+
+COPY pages /usr/local/apache2/htdocs/dailybugle/pages
+COPY images /usr/local/apache2/htdocs/dailybugle/images
+COPY ads /usr/local/apache2/htdocs/dailybugle/ads
+COPY components /usr/local/apache2/htdocs/dailybugle/components
+COPY constants.js /usr/local/apache2/htdocs/dailybugle
+COPY index.html /usr/local/apache2/htdocs/dailybugle
+COPY router.js /usr/local/apache2/htdocs/dailybugle
+COPY styles.css /usr/local/apache2/htdocs/dailybugle
+
+COPY conf_files/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY conf_files/proxy-html.conf /usr/local/apache2/conf/extra/proxy-html.conf
+
+

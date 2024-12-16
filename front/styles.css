@@ -1,0 +1,95 @@
+body {
+    min-height: 100vh;
+}
+
+main {
+    min-height: 71vh;
+}
+
+#content {
+    display: flex;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.loginContainer .form-text {
+    display: none;
+    color: red;
+}
+
+.alert {
+    display: none;
+}
+
+.loginContainer {
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #d32f2f;
+    box-shadow: 0 0 10px #d32f2f;
+}
+
+.loginContainer p {
+    margin-top: 10px;
+}
+
+.loginContainer label {
+    font-size: 1.2em;
+}
+
+.loginContainer h1 {
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #961313;
+}
+
+.header-divider {
+    background-color: #fff;
+    height: 2px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.banner {
+    padding: 20px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: 'Georgia', serif;
+    text-decoration: none;
+    color: #ccc; /* bold red */
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.redBoxShadow {
+    box-shadow: 0 0 10px #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+#navbarContainer {
+    background-color: #961313;
+}
+
+#userProfile {
+    color: white;
+}
+
+.storyBody {
+    max-height: 70%;
+    overflow: auto;
+}
+
+.storyPreview {
+    transition: transform 0.3s;
+}
+
+.storyPreview:hover {
+    cursor: pointer;
+    
+    transform: scale(1.05);
+}

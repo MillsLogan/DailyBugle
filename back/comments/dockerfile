@@ -1,0 +1,26 @@
+FROM node:latest
+
+# Set environment variables
+ENV LISTENING_IP=0.0.0.0
+ENV HOSTURL=localhost
+# host.docker.internal
+ENV PORT=3064
+
+# Create and set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port
+EXPOSE $PORT
+
+# Start the application
+CMD ["node", "comment.js"]
